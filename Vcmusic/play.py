@@ -73,7 +73,7 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"****Aami Music Player ▶** \n\n**🏷️ Title** : [{songname}] \n**💭 Chat ID** : `{chat_id}` \n**Powered by : [Aami🥀](https://t.me/Aami_Song_bot)", disable_web_page_preview=True)
+            await huehue.edit(f"**Aami Music Player ▶** \n\n**🏷️ Title** : [{songname}] \n**💭 Chat ID** : `{chat_id}` \n**Powered by** : [Aami🥀](https://t.me/Aami_Song_bot)", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
             await m.reply("💡 Check the song name and try!")
@@ -103,7 +103,7 @@ async def play(client, m: Message):
                            stream_type=StreamType().pulse_stream,
                         )
                         add_to_queue(chat_id, songname, ytlink, url, "Audio", 0)
-                        await huehue.edit(f"**Memulai Memutar Music ▶** \n**🏷️ Judul** : [{songname}] \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
+                        await huehue.edit(f"**Aami Music Player ▶** \n\n**🏷️ Title** : [{songname}] \n**💭 Chat ID** : `{chat_id}` \n**Powered by : [Aami🥀](https://t.me/Aami_Song_bot)", disable_web_page_preview=True)
                      except Exception as ep:
                         await huehue.edit(f"`{ep}`")
             
