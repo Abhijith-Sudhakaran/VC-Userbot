@@ -74,7 +74,7 @@ async def vplay(client, m: Message):
   
          if chat_id in QUEUE:
             pos = add_to_queue(chat_id, songname, dl, link, "Video", Q)
-            await huehue.edit(f"🔢 Video Ditambahkan ke antrian » **{pos}**")
+            await huehue.edit(f"🔢 Video Queued at » **{pos}**")
          else:
             if Q==720:
                hmmm = HighQualityVideo()
@@ -97,7 +97,7 @@ async def vplay(client, m: Message):
          if len(m.command) < 2:
             await m.reply("💡 **Reply to an Audio File or give something to Search**")
          else:
-            huehue = await m.reply("🔎 **Mencari**")
+            huehue = await m.reply("🔎 **Searching...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
