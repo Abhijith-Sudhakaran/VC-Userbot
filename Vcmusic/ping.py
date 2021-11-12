@@ -51,7 +51,7 @@ async def ping(client, m: Message):
 async def pong(client, m: Message):
    start = time()
    current_time = datetime.utcnow()
-   pong = await m.edit("`KONTOL...`")
+   pong = await m.edit("`Pinging...`")
    delta_ping = time() - start
    await pong.edit("8✊===D")
    await pong.edit("8=✊==D")
@@ -71,12 +71,12 @@ async def pong(client, m: Message):
    await pong.edit("8===✊D")
    await pong.edit("8===✊D💦")
    await pong.edit("8====D💦💦")
-   await pong.edit("**CROOTTTT PINGGGG!**")
+   await pong.edit("**Pinged😂**")
    end = datetime.now()
    uptime_sec = (current_time - START_TIME).total_seconds()
    uptime = await _human_time_duration(int(uptime_sec))
    await pong.edit(
-       f"**KONTOL!!**\n✨ **NGENTOT** : `{delta_ping * 1000:.3f} ms`\n**⏱️ Bot Uptime** : `{uptime}`")
+       f"**I am Alive!**\n✨ **Network Speed** : `{delta_ping * 1000:.3f} ms`\n**⏱️ Bot Uptime** : `{uptime}`")
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(['help'], prefixes=f"{HNDLR}"))
 async def help(client, m: Message):
@@ -85,5 +85,5 @@ async def help(client, m: Message):
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command(['repo'], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
-   KONTOL = f"⚙️ **Source code**\n• **😼 Github :** [VC-Userbot](https://github.com/rioprojectx/Vc-Userbot)\n• 🗂️ **GPL - 3.0 License**"
-   await m.edit(KONTOL, disable_web_page_preview=True)
+   KONTOL = f"⚙️ **Source code**\n• **😼 Github :** [VC-Userbot](https://t.me/OOMBIKKO MYRE☺️)\n• 🗂️ **GPL - 3.0 License**"
+   await m.edit(KONTOL, disable_web_page_preview=False)
