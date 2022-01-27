@@ -54,7 +54,7 @@ async def vplay(client, m: Message):
    chat_id = m.chat.id
    if replied:
       if replied.video or replied.document:
-         huehue = await replied.reply("📥 **Mendownload**")
+         huehue = await replied.reply("📥 **Downloading...**")
          dl = await replied.download()
          link = replied.link
          if len(m.command) < 2:
@@ -92,7 +92,7 @@ async def vplay(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Video", Q)
-            await huehue.edit(f"**Memulai Memutar Video ▶** \n**🏷️ Name** : [{songname}]({link}) \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
+            await huehue.edit(f"**Youtube Video ▶** \n**🏷️ Name** : [{songname}]({link}) \n**💭 Chat ID** : `{chat_id}`", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
             await m.reply("💡 **Reply to an Audio File or give something to Search**")
