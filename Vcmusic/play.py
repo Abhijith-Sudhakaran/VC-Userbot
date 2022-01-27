@@ -51,7 +51,7 @@ async def play(client, m: Message):
    chat_id = m.chat.id
    if replied:
       if replied.audio or replied.voice:
-         huehue = await replied.reply("📥 Downloading Song")
+         huehue = await replied.reply("📥 **Downloading Song Please Wait!**")
          dl = await replied.download()
          link = replied.link
          if replied.audio:
@@ -73,7 +73,7 @@ async def play(client, m: Message):
                stream_type=StreamType().pulse_stream,
             )
             add_to_queue(chat_id, songname, dl, link, "Audio", 0)
-            await huehue.edit(f"**Aami Music Player ▶** \n\n**🏷️ Title** : [{songname}] \n**💭 Chat ID** : `{chat_id}` \n**Powered by** : [Aami🥀](https://t.me/Aami_Song_bot)", disable_web_page_preview=True)
+            await huehue.edit(f"**Geethu Music Player ▶** \n\n**🏷️ Title** : [{songname}] \n**💭 Chat ID** : `{chat_id}` \n**Powered by** : [Aami🥀](https://t.me/Geethu_Pro_bot)", disable_web_page_preview=True)
       else:
          if len(m.command) < 2:
             await m.reply("💡 Check the song name and try!")
